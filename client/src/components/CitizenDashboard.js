@@ -29,6 +29,32 @@ function CitizenDashboard() {
         setPdfFile(e.target.files[0]);
     };
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     if (!selectedProject || !pdfFile) {
+    //         toast.error('Please select a project and a PDF file');
+    //         return;
+    //     }
+
+    //     const formData = new FormData();
+    //     formData.append('pdf', pdfFile);
+    //     formData.append('projectId', selectedProject._id);
+
+    //     try {
+    //         await axios.post('http://localhost:5000/api/projects/submit', formData, {
+    //             headers: {
+    //                 'Content-Type': 'multipart/form-data',
+    //                 'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //             }
+    //         });
+    //         toast.success('PDF submitted successfully');
+    //         setPdfFile(null);
+    //         setSelectedProject(null);
+    //     } catch (error) {
+    //         console.error('Failed to submit PDF:', error);
+    //         toast.error('Failed to submit PDF');
+    //     }
+    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!selectedProject || !pdfFile) {
