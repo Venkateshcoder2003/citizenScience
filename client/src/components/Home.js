@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 function Home() {
@@ -11,6 +10,14 @@ function Home() {
                     </h1>
                     <p className="mt-3 text-xl text-gray-600 sm:mt-4">
                         Contribute to scientific research from your home!
+                    </p>
+                    <p className="mt-3 text-xl text-gray-600 sm:mt-4">
+                        This website contributes to:
+                        <ul className="list-disc list-inside mt-3 text-left">
+                            <li>People making research or projects in any domain.</li>
+                            <li>Researchers can update their project details by registering as scientists.</li>
+                            <li>Interested citizens can contribute to these projects.</li>
+                        </ul>
                     </p>
                 </div>
             </div>

@@ -24,7 +24,7 @@ function Register() {
         e.preventDefault();
         try {
             // eslint-disable-next-line no-unused-vars
-            const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+            const response = await axios.post('https://citizenscienceapp.onrender.com/api/auth/register', formData);
             toast.success('Registration successful!');
             setTimeout(() => {
                 navigate(formData.role === 'scientist' ? '/scientist-dashboard' : '/citizen-dashboard');
