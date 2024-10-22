@@ -15,7 +15,7 @@ function CreateProject() {
         try {
             const token = localStorage.getItem('token');
             await axios.post(
-                'https://citizenscienceapp.onrender.com/api/projects',
+                'http://localhost:5000/api/projects',
                 { title, description },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
