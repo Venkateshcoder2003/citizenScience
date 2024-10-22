@@ -13,7 +13,7 @@ function ScientistDashboard() {
 
     const fetchProjects = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/projects', {
+            const response = await axios.get('https://citizenscience.onrender.com/api/projects', {
                 headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
             });
             setProjects(response.data);
@@ -33,7 +33,7 @@ function ScientistDashboard() {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('http://localhost:5000/api/projects', newProject, {
+            await axios.post('https://citizenscience.onrender.com/api/projects', newProject, {
                 headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
             });
             toast.success('Project created successfully');
@@ -59,7 +59,7 @@ function ScientistDashboard() {
             }
 
             const response = await axios.get(
-                `http://localhost:5000/api/projects/submissions/${submissionId}`,
+                `https://citizenscience.onrender.com/api/projects/submissions/${submissionId}`,
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,

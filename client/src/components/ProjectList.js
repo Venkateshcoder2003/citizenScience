@@ -7,7 +7,7 @@ function ProjectList() {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/projects');
+                const response = await axios.get('https://citizenscience.onrender.com/api/projects');
                 setProjects(response.data);
             } catch (error) {
                 console.error('Failed to fetch projects:', error);
